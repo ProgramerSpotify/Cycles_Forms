@@ -67,13 +67,13 @@
 
   <div class="card">
     <label>Nome completo <span class="req">*</span></label>
-    <input type="text" placeholder="Ex: João Silva Santos">
+    <input type="text" name="01_nome_completo" placeholder="Ex: João Silva Santos">
   </div>
 
   <div class="card">
     <label>Seu protocolo é <span class="req">*</span></label>
     <div class="radio-group">
-      <label><input type="radio" name="protocolo"> Semestral</label>
+      <label><input type="radio" name="02_protocolo"> Semestral</label>
       <label><input type="radio" name="protocolo"> Mensal</label>
     </div>
   </div>
@@ -82,11 +82,11 @@
     <div class="num-row">
       <div>
         <label>Idade <span class="req">*</span></label>
-        <input type="number" placeholder="Ex: 17">
+        <input type="number" name="03_idade" placeholder="Ex: 17">
       </div>
       <div>
         <label>Altura (m) <span class="req">*</span></label>
-        <input type="text" placeholder="Ex: 1,78">
+        <input type="text" name="04_altura" placeholder="Ex: 1,78">
       </div>
     </div>
   </div>
@@ -95,11 +95,11 @@
     <div class="num-row">
       <div>
         <label>Peso atual (kg) <span class="req">*</span></label>
-        <input type="number" placeholder="Ex: 72">
+        <input type="number" name="05_peso_kg" placeholder="Ex: 72">
       </div>
       <div>
         <label>Cidade / Estado <span class="req">*</span> <span class="tag-new">NOVO</span></label>
-        <input type="text" placeholder="Ex: São Paulo / SP">
+        <input type="text" name="06_cidade_estado" placeholder="Ex: São Paulo / SP">
       </div>
     </div>
   </div>
@@ -113,26 +113,26 @@
   <div class="card">
     <label>Marque o que se aplica à sua INFÂNCIA <span class="req">*</span></label>
     <div class="check-group">
-      <label><input type="checkbox"> Respiração bucal crônica</label>
-      <label><input type="checkbox"> Aparelho ortodôntico (ou teve)</label>
-      <label><input type="checkbox"> Pratiquei esporte competitivo</label>
-      <label><input type="checkbox"> Postura ruim / FHP (cabeça projetada)</label>
-      <label><input type="checkbox"> Dor nas costas precoce</label>
-      <label><input type="checkbox"> Ronco ou apneia</label>
-      <label><input type="checkbox"> Nenhum dos acima</label>
+      <label><input type="checkbox" name="07_infancia"> Respiração bucal crônica</label>
+      <label><input type="checkbox" name="07_infancia"> Aparelho ortodôntico (ou teve)</label>
+      <label><input type="checkbox" name="07_infancia"> Pratiquei esporte competitivo</label>
+      <label><input type="checkbox" name="07_infancia"> Postura ruim / FHP (cabeça projetada)</label>
+      <label><input type="checkbox" name="07_infancia"> Dor nas costas precoce</label>
+      <label><input type="checkbox" name="07_infancia"> Ronco ou apneia</label>
+      <label><input type="checkbox" name="07_infancia"> Nenhum dos acima</label>
     </div>
   </div>
 
   <div class="card">
     <label>Condições clínicas atuais <span class="req">*</span></label>
     <div class="hint">Pé chato, escoliose, pectus excavatum, asma, hipotireoidismo, etc. Se nenhuma, escreva "nenhuma".</div>
-    <textarea placeholder="Ex: Pectus excavatum leve, dor lombar crônica"></textarea>
+    <textarea name="08_condicoes_clinicas" placeholder="Ex: Pectus excavatum leve, dor lombar crônica"></textarea>
   </div>
 
   <div class="card">
     <label>Tem aparelho ortodôntico AGORA? <span class="req">*</span> <span class="tag-new">NOVO</span></label>
     <div class="radio-group">
-      <label><input type="radio" name="aparelho"> Sim — fixo (braces)</label>
+      <label><input type="radio" name="09_aparelho_ortodontico"> Sim — fixo (braces)</label>
       <label><input type="radio" name="aparelho"> Sim — alinhadores (Invisalign/similar)</label>
       <label><input type="radio" name="aparelho"> Não</label>
       <label><input type="radio" name="aparelho"> Já tive, tirei</label>
@@ -141,19 +141,19 @@
 
   <div class="card">
     <label>Remédios de uso diário <span class="req">*</span></label>
-    <input type="text" placeholder="Ex: Roacutan 20mg. Se nenhum, escreva nenhum.">
+    <input type="text" name="10_remedios_diarios" placeholder="Ex: Roacutan 20mg. Se nenhum, escreva nenhum.">
   </div>
 
   <div class="card">
     <label>Alergias relevantes <span class="req">*</span></label>
     <div class="hint">Substância → tipo de reação. Ex: "dipirona → urticária". Se nenhuma, escreva nenhuma.</div>
-    <input type="text" placeholder="Substância → reação">
+    <input type="text" name="11_alergias" placeholder="Substância → reação">
   </div>
 
   <div class="card">
     <label>Histórico de acne? <span class="req">*</span> <span class="tag-new">NOVO</span></label>
     <div class="radio-group">
-      <label><input type="radio" name="acne"> Nunca tive</label>
+      <label><input type="radio" name="12_historico_acne"> Nunca tive</label>
       <label><input type="radio" name="acne"> Leve (pápulas ocasionais)</label>
       <label><input type="radio" name="acne"> Moderada (várias pápulas, às vezes pústulas)</label>
       <label><input type="radio" name="acne"> Severa / cística (já fiz ou faço tratamento)</label>
@@ -164,14 +164,14 @@
     <label>Dores ou limitações físicas <span class="req">*</span></label>
     <div class="hint">Marque todas que se aplicam.</div>
     <div class="check-group">
-      <label><input type="checkbox"> Nenhuma</label>
-      <label><input type="checkbox"> Pescoço</label>
-      <label><input type="checkbox"> Lombar</label>
-      <label><input type="checkbox"> Joelho</label>
-      <label><input type="checkbox"> Tornozelo / pé</label>
-      <label><input type="checkbox"> Ombro</label>
-      <label><input type="checkbox"> Punho / cotovelo</label>
-      <label><input type="checkbox"> Quadril / glúteo</label>
+      <label><input type="checkbox" name="13_dores_limitacoes"> Nenhuma</label>
+      <label><input type="checkbox" name="13_dores_limitacoes"> Pescoço</label>
+      <label><input type="checkbox" name="13_dores_limitacoes"> Lombar</label>
+      <label><input type="checkbox" name="13_dores_limitacoes"> Joelho</label>
+      <label><input type="checkbox" name="13_dores_limitacoes"> Tornozelo / pé</label>
+      <label><input type="checkbox" name="13_dores_limitacoes"> Ombro</label>
+      <label><input type="checkbox" name="13_dores_limitacoes"> Punho / cotovelo</label>
+      <label><input type="checkbox" name="13_dores_limitacoes"> Quadril / glúteo</label>
     </div>
   </div>
 
@@ -183,18 +183,18 @@
 
   <div class="card">
     <label>Foi dormir ontem <span class="req">*</span></label>
-    <input type="text" placeholder="Ex: 23:30 ou 02:15">
+    <input type="text" name="14_foi_dormir_ontem" placeholder="Ex: 23:30 ou 02:15">
   </div>
 
   <div class="card">
     <label>Acordou ontem <span class="req">*</span></label>
-    <input type="text" placeholder="Ex: 07:00">
+    <input type="text" name="15_acordou_ontem" placeholder="Ex: 07:00">
   </div>
 
   <div class="card">
     <label>Score de sono ontem (0 = péssimo / 10 = excelente) <span class="req">*</span></label>
     <div class="scale-wrap">
-      <label><input type="radio" name="sono_score" value="0">0</label>
+      <label><input type="radio" name="16_score_sono" value="0">0</label>
       <label><input type="radio" name="sono_score" value="1">1</label>
       <label><input type="radio" name="sono_score" value="2">2</label>
       <label><input type="radio" name="sono_score" value="3">3</label>
@@ -212,20 +212,20 @@
   <div class="card">
     <label>Usou celular nos 30 min antes de dormir? <span class="req">*</span></label>
     <div class="radio-group">
-      <label><input type="radio" name="celular_sono"> Sim</label>
+      <label><input type="radio" name="17_celular_antes_dormir"> Sim</label>
       <label><input type="radio" name="celular_sono"> Não</label>
     </div>
   </div>
 
   <div class="card">
     <label>Qual é o seu horário habitual de dormir (maioria dos dias)? <span class="req">*</span> <span class="tag-new">NOVO</span></label>
-    <input type="text" placeholder="Ex: geralmente 01:00, às vezes mais tarde">
+    <input type="text" name="18_horario_habitual_dormir" placeholder="Ex: geralmente 01:00, às vezes mais tarde">
   </div>
 
   <div class="card">
     <label>Quarto escuro para dormir? <span class="tag-new">NOVO</span></label>
     <div class="radio-group">
-      <label><input type="radio" name="quarto_escuro"> Blackout total</label>
+      <label><input type="radio" name="19_quarto_escuro"> Blackout total</label>
       <label><input type="radio" name="quarto_escuro"> Parcialmente escuro</label>
       <label><input type="radio" name="quarto_escuro"> Há luz entrando (rua, luz ambiente)</label>
     </div>
@@ -239,7 +239,7 @@
   <div class="card">
     <label>Refeições completas ontem <span class="req">*</span></label>
     <div class="radio-group">
-      <label><input type="radio" name="refeicoes"> 1</label>
+      <label><input type="radio" name="20_refeicoes_ontem"> 1</label>
       <label><input type="radio" name="refeicoes"> 2</label>
       <label><input type="radio" name="refeicoes"> 3</label>
       <label><input type="radio" name="refeicoes"> 4</label>
@@ -249,18 +249,18 @@
 
   <div class="card">
     <label>Janela alimentar ontem (1ª refeição → última) <span class="req">*</span></label>
-    <input type="text" placeholder="Ex: 08:00 → 21:00">
+    <input type="text" name="21_janela_alimentar" placeholder="Ex: 08:00 → 21:00">
   </div>
 
   <div class="card">
     <label>Litros de água por dia (média) <span class="req">*</span></label>
-    <input type="text" placeholder="Ex: 2 litros">
+    <input type="text" name="22_litros_agua_dia" placeholder="Ex: 2 litros">
   </div>
 
   <div class="card">
     <label>Sente fome acima de 7/10 ao longo do dia? <span class="req">*</span></label>
     <div class="radio-group">
-      <label><input type="radio" name="fome"> Sim — frequentemente</label>
+      <label><input type="radio" name="23_fome_acima_7"> Sim — frequentemente</label>
       <label><input type="radio" name="fome"> Às vezes</label>
       <label><input type="radio" name="fome"> Raramente / nunca</label>
     </div>
@@ -269,7 +269,7 @@
   <div class="card">
     <label>Já fez jejum acima de 20h? <span class="req">*</span></label>
     <div class="radio-group">
-      <label><input type="radio" name="jejum"> Sim</label>
+      <label><input type="radio" name="24_jejum_acima_20h"> Sim</label>
       <label><input type="radio" name="jejum"> Não</label>
     </div>
   </div>
@@ -277,20 +277,20 @@
   <div class="card">
     <label>Usa whey protein, creatina ou outro suplemento atualmente? <span class="tag-new">NOVO</span></label>
     <div class="hint">Liste o que já usa. Se nenhum, escreva nenhum.</div>
-    <textarea placeholder="Ex: Whey protein, creatina 5g/dia, Vit D3"></textarea>
+    <textarea name="25_suplementos_atuais" placeholder="Ex: Whey protein, creatina 5g/dia, Vit D3"></textarea>
   </div>
 
   <div class="card">
     <label>Tem alguma restrição alimentar? <span class="tag-new">NOVO</span></label>
     <div class="check-group">
-      <label><input type="checkbox"> Nenhuma</label>
-      <label><input type="checkbox"> Vegetariano</label>
-      <label><input type="checkbox"> Vegano</label>
-      <label><input type="checkbox"> Intolerância à lactose</label>
-      <label><input type="checkbox"> Intolerância ao glúten / doença celíaca</label>
-      <label><input type="checkbox"> Outro (descreva abaixo)</label>
+      <label><input type="checkbox" name="26_restricao_alimentar"> Nenhuma</label>
+      <label><input type="checkbox" name="26_restricao_alimentar"> Vegetariano</label>
+      <label><input type="checkbox" name="26_restricao_alimentar"> Vegano</label>
+      <label><input type="checkbox" name="26_restricao_alimentar"> Intolerância à lactose</label>
+      <label><input type="checkbox" name="26_restricao_alimentar"> Intolerância ao glúten / doença celíaca</label>
+      <label><input type="checkbox" name="26_restricao_alimentar"> Outro (descreva abaixo)</label>
     </div>
-    <input type="text" placeholder="Se Outro, descreva:" style="margin-top:8px">
+    <input type="text" name="27_restricao_outro" placeholder="Se Outro, descreva:" style="margin-top:8px">
   </div>
 
   <!-- ══════════ BLOCO 5 — TREINO ══════════ -->
@@ -301,7 +301,7 @@
   <div class="card">
     <label>Treinos por semana <span class="req">*</span></label>
     <div class="radio-group">
-      <label><input type="radio" name="treinos"> 0 (sedentário)</label>
+      <label><input type="radio" name="28_treinos_por_semana"> 0 (sedentário)</label>
       <label><input type="radio" name="treinos"> 1-2</label>
       <label><input type="radio" name="treinos"> 3</label>
       <label><input type="radio" name="treinos"> 4</label>
@@ -313,19 +313,19 @@
   <div class="card">
     <label>Modalidade de treino principal <span class="req">*</span> <span class="tag-new">NOVO</span></label>
     <div class="check-group">
-      <label><input type="checkbox"> Musculação / hipertrofia</label>
-      <label><input type="checkbox"> Funcional / crossfit</label>
-      <label><input type="checkbox"> Calistenia</label>
-      <label><input type="checkbox"> Esporte (futebol, basquete, etc.)</label>
-      <label><input type="checkbox"> Cardio apenas (corrida, bike)</label>
-      <label><input type="checkbox"> Não treino</label>
+      <label><input type="checkbox" name="29_modalidade_treino"> Musculação / hipertrofia</label>
+      <label><input type="checkbox" name="29_modalidade_treino"> Funcional / crossfit</label>
+      <label><input type="checkbox" name="29_modalidade_treino"> Calistenia</label>
+      <label><input type="checkbox" name="29_modalidade_treino"> Esporte (futebol, basquete, etc.)</label>
+      <label><input type="checkbox" name="29_modalidade_treino"> Cardio apenas (corrida, bike)</label>
+      <label><input type="checkbox" name="29_modalidade_treino"> Não treino</label>
     </div>
   </div>
 
   <div class="card">
     <label>Há quantos meses treina de forma consistente? <span class="tag-new">NOVO</span></label>
     <div class="radio-group">
-      <label><input type="radio" name="tempo_treino"> Menos de 3 meses</label>
+      <label><input type="radio" name="30_tempo_treino_meses"> Menos de 3 meses</label>
       <label><input type="radio" name="tempo_treino"> 3-6 meses</label>
       <label><input type="radio" name="tempo_treino"> 6-12 meses</label>
       <label><input type="radio" name="tempo_treino"> 1-2 anos</label>
@@ -336,7 +336,7 @@
   <div class="card">
     <label>Tem acesso a academia com equipamentos completos? <span class="req">*</span> <span class="tag-new">NOVO</span></label>
     <div class="radio-group">
-      <label><input type="radio" name="academia"> Sim — academia completa</label>
+      <label><input type="radio" name="31_acesso_academia"> Sim — academia completa</label>
       <label><input type="radio" name="academia"> Parcial (casa, condomínio)</label>
       <label><input type="radio" name="academia"> Não tenho acesso a academia</label>
     </div>
@@ -345,7 +345,7 @@
   <div class="card">
     <label>Caminhada no dia a dia? <span class="req">*</span></label>
     <div class="radio-group">
-      <label><input type="radio" name="caminhada"> Sim — ando bastante</label>
+      <label><input type="radio" name="32_caminhada_dia_a_dia"> Sim — ando bastante</label>
       <label><input type="radio" name="caminhada"> Às vezes</label>
       <label><input type="radio" name="caminhada"> Não, fico sentado a maior parte do dia</label>
     </div>
@@ -359,7 +359,7 @@
   <div class="card">
     <label>Score de pele no espelho hoje (0-10) <span class="req">*</span></label>
     <div class="scale-wrap">
-      <label><input type="radio" name="pele_score" value="0">0</label>
+      <label><input type="radio" name="33_score_pele" value="0">0</label>
       <label><input type="radio" name="pele_score" value="1">1</label>
       <label><input type="radio" name="pele_score" value="2">2</label>
       <label><input type="radio" name="pele_score" value="3">3</label>
@@ -377,7 +377,7 @@
   <div class="card">
     <label>Como você descreveria sua pele? <span class="req">*</span></label>
     <div class="radio-group">
-      <label><input type="radio" name="tipo_pele"> Seca (descamação, sensação de apertar)</label>
+      <label><input type="radio" name="34_tipo_pele"> Seca (descamação, sensação de apertar)</label>
       <label><input type="radio" name="tipo_pele"> Normal (equilibrada, sem extremos)</label>
       <label><input type="radio" name="tipo_pele"> Oleosa (brilho, poros dilatados)</label>
       <label><input type="radio" name="tipo_pele"> Mista (oleosa na zona T, normal/seca nas bochechas)</label>
@@ -388,28 +388,28 @@
   <div class="card">
     <label>Problemas de pele atuais <span class="req">*</span></label>
     <div class="check-group">
-      <label><input type="checkbox"> Nenhum</label>
-      <label><input type="checkbox"> Acne ativa (pápulas/pústulas)</label>
-      <label><input type="checkbox"> Manchas pós-acne (PIH)</label>
-      <label><input type="checkbox"> Olheiras vasculares (roxo/azulado)</label>
-      <label><input type="checkbox"> Olheiras estruturais (sombra/sulco)</label>
-      <label><input type="checkbox"> Rosácea ou vermelhidão difusa</label>
-      <label><input type="checkbox"> Dermatite seborreica (descamação cabeça/testa)</label>
-      <label><input type="checkbox"> Pele muito ressecada / eczema</label>
-      <label><input type="checkbox"> Cicatrizes de acne</label>
+      <label><input type="checkbox" name="35_problemas_pele"> Nenhum</label>
+      <label><input type="checkbox" name="35_problemas_pele"> Acne ativa (pápulas/pústulas)</label>
+      <label><input type="checkbox" name="35_problemas_pele"> Manchas pós-acne (PIH)</label>
+      <label><input type="checkbox" name="35_problemas_pele"> Olheiras vasculares (roxo/azulado)</label>
+      <label><input type="checkbox" name="35_problemas_pele"> Olheiras estruturais (sombra/sulco)</label>
+      <label><input type="checkbox" name="35_problemas_pele"> Rosácea ou vermelhidão difusa</label>
+      <label><input type="checkbox" name="35_problemas_pele"> Dermatite seborreica (descamação cabeça/testa)</label>
+      <label><input type="checkbox" name="35_problemas_pele"> Pele muito ressecada / eczema</label>
+      <label><input type="checkbox" name="35_problemas_pele"> Cicatrizes de acne</label>
     </div>
   </div>
 
   <div class="card">
     <label>Já usa algum skincare regularmente? <span class="tag-new">NOVO</span></label>
     <div class="hint">Liste o que já usa. Se nenhum, escreva nenhum.</div>
-    <textarea placeholder="Ex: Gel de limpeza, hidratante, protetor solar Episol FPS60"></textarea>
+    <textarea name="36_skincare_atual" placeholder="Ex: Gel de limpeza, hidratante, protetor solar Episol FPS60"></textarea>
   </div>
 
   <div class="card">
     <label>Usa protetor solar diariamente? <span class="req">*</span></label>
     <div class="radio-group">
-      <label><input type="radio" name="spf"> Sim, todos os dias</label>
+      <label><input type="radio" name="37_protetor_solar_diario"> Sim, todos os dias</label>
       <label><input type="radio" name="spf"> Às vezes</label>
       <label><input type="radio" name="spf"> Raramente ou nunca</label>
     </div>
@@ -418,7 +418,7 @@
   <div class="card">
     <label>Tipo de cabelo <span class="req">*</span> <span class="tag-new">NOVO</span></label>
     <div class="radio-group">
-      <label><input type="radio" name="tipo_cabelo"> Liso (1A, 1B)</label>
+      <label><input type="radio" name="38_tipo_cabelo"> Liso (1A, 1B)</label>
       <label><input type="radio" name="tipo_cabelo"> Levemente ondulado (2A)</label>
       <label><input type="radio" name="tipo_cabelo"> Ondulado (2B-2C)</label>
       <label><input type="radio" name="tipo_cabelo"> Cacheado (3A-3B)</label>
@@ -429,7 +429,7 @@
   <div class="card">
     <label>Couro cabeludo <span class="req">*</span> <span class="tag-new">NOVO</span></label>
     <div class="radio-group">
-      <label><input type="radio" name="couro"> Normal</label>
+      <label><input type="radio" name="39_couro_cabeludo"> Normal</label>
       <label><input type="radio" name="couro"> Oleoso (fica com aspecto gorduroso rápido)</label>
       <label><input type="radio" name="couro"> Seco / com caspa</label>
       <label><input type="radio" name="couro"> Sensível / coça facilmente</label>
@@ -439,7 +439,7 @@
   <div class="card">
     <label>Histórico familiar de calvície (pai, tios paternos)? <span class="tag-new">NOVO</span></label>
     <div class="radio-group">
-      <label><input type="radio" name="calv"> Sim — calvície marcante</label>
+      <label><input type="radio" name="40_historico_calv"> Sim — calvície marcante</label>
       <label><input type="radio" name="calv"> Leve (cabelo fino mas não calvo)</label>
       <label><input type="radio" name="calv"> Não</label>
       <label><input type="radio" name="calv"> Não sei</label>
@@ -454,7 +454,7 @@
   <div class="card">
     <label>Usa ou já usou hormônios exógenos? <span class="req">*</span></label>
     <div class="radio-group">
-      <label><input type="radio" name="hormonio"> Sim — uso atual (descreva abaixo)</label>
+      <label><input type="radio" name="41_hormonios_exogenos"> Sim — uso atual (descreva abaixo)</label>
       <label><input type="radio" name="hormonio"> Sim — já usei, não uso mais</label>
       <label><input type="radio" name="hormonio"> Não</label>
     </div>
@@ -464,7 +464,7 @@
   <div class="card">
     <label>Já fez exames de sangue recentemente? <span class="tag-new">NOVO</span></label>
     <div class="radio-group">
-      <label><input type="radio" name="exames"> Sim — nos últimos 6 meses</label>
+      <label><input type="radio" name="43_exames_recentes"> Sim — nos últimos 6 meses</label>
       <label><input type="radio" name="exames"> Sim — faz mais de 1 ano</label>
       <label><input type="radio" name="exames"> Não</label>
     </div>
@@ -473,20 +473,20 @@
   <div class="card">
     <label>Se fez exames, marque os que tem resultado: <span class="tag-new">NOVO</span></label>
     <div class="check-group">
-      <label><input type="checkbox"> Testosterona total</label>
-      <label><input type="checkbox"> TSH / T4 (tireoide)</label>
-      <label><input type="checkbox"> Vitamina D (25-OH)</label>
-      <label><input type="checkbox"> Ferritina / ferro sérico</label>
-      <label><input type="checkbox"> Zinco sérico</label>
-      <label><input type="checkbox"> Glicemia em jejum / insulina</label>
-      <label><input type="checkbox"> Hemograma completo</label>
+      <label><input type="checkbox" name="44_exames_disponiveis"> Testosterona total</label>
+      <label><input type="checkbox" name="44_exames_disponiveis"> TSH / T4 (tireoide)</label>
+      <label><input type="checkbox" name="44_exames_disponiveis"> Vitamina D (25-OH)</label>
+      <label><input type="checkbox" name="44_exames_disponiveis"> Ferritina / ferro sérico</label>
+      <label><input type="checkbox" name="44_exames_disponiveis"> Zinco sérico</label>
+      <label><input type="checkbox" name="44_exames_disponiveis"> Glicemia em jejum / insulina</label>
+      <label><input type="checkbox" name="44_exames_disponiveis"> Hemograma completo</label>
     </div>
   </div>
 
   <div class="card">
     <label>Tem acesso a sauna? <span class="tag-new">NOVO</span></label>
     <div class="radio-group">
-      <label><input type="radio" name="sauna"> Sim — academia ou casa</label>
+      <label><input type="radio" name="45_acesso_sauna"> Sim — academia ou casa</label>
       <label><input type="radio" name="sauna"> Não tenho acesso</label>
     </div>
   </div>
@@ -494,7 +494,7 @@
   <div class="card">
     <label>Tem acesso a banho frio / chuveiro frio tolerável? <span class="tag-new">NOVO</span></label>
     <div class="radio-group">
-      <label><input type="radio" name="frio"> Sim</label>
+      <label><input type="radio" name="46_banho_frio"> Sim</label>
       <label><input type="radio" name="frio"> Não / não consigo tolerar</label>
     </div>
   </div>
@@ -507,13 +507,13 @@
   <div class="card">
     <label>Top 3 desejos estéticos <span class="req">*</span></label>
     <div class="hint">Escreva em ordem de prioridade, separado por vírgula.</div>
-    <textarea placeholder="Ex: Jawline definida, pele sem acne, pescoço mais grosso"></textarea>
+    <textarea name="48_top3_desejos" placeholder="Ex: Jawline definida, pele sem acne, pescoço mais grosso"></textarea>
   </div>
 
   <div class="card">
     <label>Estética buscada <span class="req">*</span></label>
     <div class="radio-group">
-      <label><input type="radio" name="estetica"> Natural (harmonia sutil)</label>
+      <label><input type="radio" name="49_estetica_buscada"> Natural (harmonia sutil)</label>
       <label><input type="radio" name="estetica"> Meio-termo</label>
       <label><input type="radio" name="estetica"> Uncanny / máximo dimorfismo</label>
     </div>
@@ -522,18 +522,18 @@
   <div class="card">
     <label>Link ou nome de referência de aparência <span class="req">*</span></label>
     <div class="hint">Pessoa real (atleta, ator, perfil) cujo tipo de face/corpo você admira. Seja específico — "homem bonito genérico" não ajuda.</div>
-    <textarea placeholder="Ex: orbitalgrowth (TikTok), Henry Cavill, @username"></textarea>
+    <textarea name="50_referencia_aparencia" placeholder="Ex: orbitalgrowth (TikTok), Henry Cavill, @username"></textarea>
   </div>
 
   <div class="card">
     <label>O que você mais quer melhorar no seu COMPORTAMENTO / SOCIAL? <span class="tag-new">NOVO</span></label>
     <div class="check-group">
-      <label><input type="checkbox"> Presença / confiança em público</label>
-      <label><input type="checkbox"> Contato visual</label>
-      <label><input type="checkbox"> Falar com mais calma e pausas</label>
-      <label><input type="checkbox"> Reduzir ansiedade social</label>
-      <label><input type="checkbox"> Liderança / autoridade percebida</label>
-      <label><input type="checkbox"> Não é prioridade agora</label>
+      <label><input type="checkbox" name="51_melhorar_comportamento"> Presença / confiança em público</label>
+      <label><input type="checkbox" name="51_melhorar_comportamento"> Contato visual</label>
+      <label><input type="checkbox" name="51_melhorar_comportamento"> Falar com mais calma e pausas</label>
+      <label><input type="checkbox" name="51_melhorar_comportamento"> Reduzir ansiedade social</label>
+      <label><input type="checkbox" name="51_melhorar_comportamento"> Liderança / autoridade percebida</label>
+      <label><input type="checkbox" name="51_melhorar_comportamento"> Não é prioridade agora</label>
     </div>
   </div>
 
@@ -546,7 +546,7 @@
     <label>Score de foco/concentração atual (0-10) <span class="req">*</span></label>
     <div class="hint">0 = não consigo focar nada. 10 = foco máximo, produtivo.</div>
     <div class="scale-wrap">
-      <label><input type="radio" name="foco_score" value="0">0</label>
+      <label><input type="radio" name="52_score_foco" value="0">0</label>
       <label><input type="radio" name="foco_score" value="1">1</label>
       <label><input type="radio" name="foco_score" value="2">2</label>
       <label><input type="radio" name="foco_score" value="3">3</label>
@@ -564,7 +564,7 @@
   <div class="card">
     <label>Principal sabotador do seu foco? <span class="tag-new">NOVO</span></label>
     <div class="radio-group">
-      <label><input type="radio" name="foco_sab"> Redes sociais / celular</label>
+      <label><input type="radio" name="53_sabotador_foco"> Redes sociais / celular</label>
       <label><input type="radio" name="radio_foco_sab2"> Ansiedade / pensamentos acelerados</label>
       <label><input type="radio" name="foco_sab"> Sono ruim / cansaço crônico</label>
       <label><input type="radio" name="foco_sab"> Ambiente barulhento / distrações externas</label>
@@ -575,7 +575,7 @@
   <div class="card">
     <label>Qual é sua rotina escolar / acadêmica / profissional? <span class="tag-new">NOVO</span></label>
     <div class="hint">Período (manhã/tarde/noite), quantidade de horas de estudo, pressão atual.</div>
-    <textarea placeholder="Ex: Escola período da manhã, estudo 2h por dia para o ENEM"></textarea>
+    <textarea name="54_rotina_escolar" placeholder="Ex: Escola período da manhã, estudo 2h por dia para o ENEM"></textarea>
   </div>
 
   <!-- ══════════ BLOCO 10 — LOGÍSTICA E FINANCEIRO ══════════ -->
@@ -587,7 +587,7 @@
     <label>Possibilidade de gastos mensais com o protocolo <span class="req">*</span></label>
     <div class="hint">Inclui suplementos, skincare e equipamentos. Mínimo para protocolo básico: R$200.</div>
     <div class="radio-group">
-      <label><input type="radio" name="orcamento"> R$200-400 (básico essencial)</label>
+      <label><input type="radio" name="55_orcamento_mensal"> R$200-400 (básico essencial)</label>
       <label><input type="radio" name="orcamento"> R$400-700 (intermediário)</label>
       <label><input type="radio" name="orcamento"> R$700-1.000 (completo)</label>
       <label><input type="radio" name="orcamento"> R$1.000+ (sem restrição)</label>
@@ -597,7 +597,7 @@
   <div class="card">
     <label>Tem LIPUS? <span class="tag-new">NOVO</span></label>
     <div class="radio-group">
-      <label><input type="radio" name="lipus"> Sim</label>
+      <label><input type="radio" name="56_tem_lipus"> Sim</label>
       <label><input type="radio" name="lipus"> Não — posso comprar</label>
       <label><input type="radio" name="lipus"> Não — não tenho orçamento agora</label>
     </div>
@@ -606,7 +606,7 @@
   <div class="card">
     <label>Tem LED (RLT — Red Light Therapy)? <span class="tag-new">NOVO</span></label>
     <div class="radio-group">
-      <label><input type="radio" name="rlt"> Sim</label>
+      <label><input type="radio" name="57_tem_rlt"> Sim</label>
       <label><input type="radio" name="rlt"> Não — posso comprar</label>
       <label><input type="radio" name="rlt"> Não — sem orçamento agora</label>
     </div>
@@ -615,7 +615,7 @@
   <div class="card">
     <label>Mora com família ou sozinho? <span class="tag-new">NOVO</span></label>
     <div class="radio-group">
-      <label><input type="radio" name="mora"> Com família</label>
+      <label><input type="radio" name="59_mora_com"> Com família</label>
       <label><input type="radio" name="mora"> Com amigos / república</label>
       <label><input type="radio" name="mora"> Sozinho</label>
     </div>
@@ -655,7 +655,7 @@
     💰 <strong>Preço médio:</strong> R$34–50 (dermaroller 0,5mm titânio, Shopee/Magalu) · R$170–270 (dermapen elétrico básico MYM) · R$1.400–1.600 (dermapen profissional Smart GR).
   </div>
   <div class="radio-group">
-    <label><input type="radio" name="dermapen"> Sim — já tenho</label>
+    <label><input type="radio" name="58_tem_dermapen"> Sim — já tenho</label>
     <label><input type="radio" name="dermapen"> Não — posso comprar (dermaroller R$35-50)</label>
     <label><input type="radio" name="dermapen"> Não — sem orçamento agora</label>
   </div>
@@ -670,7 +670,7 @@
   <div class="card">
     <label>Tem algo importante sobre você que nenhuma pergunta acima cobriu?</label>
     <div class="hint">Contexto de vida, histórico específico, medo, lesão antiga, condição não listada — qualquer coisa que queira que eu saiba antes de montar seu protocolo.</div>
-    <textarea style="min-height:80px" placeholder="Campo livre..."></textarea>
+    <textarea style="min-height:80px" name="61_observacoes_livres" placeholder="Campo livre..."></textarea>
   </div>
 
   <!-- RODAPÉ -->
@@ -696,7 +696,9 @@
 
 <div id="toast"></div>
 <script>
-const FORMSPREE_ID = 'maqpblpk'; // ← trocar pelo ID real após criar em formspree.io
+const FORMSPREE_ID = 'maqpblpk';
+  const data = new FormData(this);
+  data.append('_subject', '🎯 Novo aluno Cycles: ' + (document.querySelector('[name="01_nome_completo"]').value || 'sem nome')); // ← trocar pelo ID real após criar em formspree.io
 
 document.getElementById('cycles-form').addEventListener('submit', async function(e) {
   e.preventDefault();
