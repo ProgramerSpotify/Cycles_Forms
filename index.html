@@ -36,6 +36,16 @@
   .counter{font-size:9.5px;color:#C9A84C;font-weight:700;float:right;margin-top:-20px}
   .tag-new{display:inline-block;background:#C9A84C22;color:#C9A84C;border:1px solid #C9A84C44;font-size:8.5px;font-weight:700;letter-spacing:.5px;padding:1px 6px;border-radius:10px;margin-left:6px;vertical-align:middle}
   .tag-removido{display:inline-block;background:#e05c5c22;color:#e05c5c;border:1px solid #e05c5c44;font-size:8.5px;font-weight:700;padding:1px 6px;border-radius:10px;margin-left:6px;vertical-align:middle}
+
+  /* ── FORMSPREE TOAST ── */
+  #toast{position:fixed;bottom:30px;left:50%;transform:translateX(-50%) translateY(100px);background:#C9A84C;color:#0D0D0D;font-weight:700;font-size:13px;padding:14px 28px;border-radius:6px;box-shadow:0 4px 24px #0003;opacity:0;transition:all .4s cubic-bezier(.4,0,.2,1);z-index:9999;letter-spacing:.5px;pointer-events:none}
+  #toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+  #toast.error{background:#e05c5c;color:#fff}
+  .submit-btn{width:100%;background:#C9A84C;color:#0D0D0D;border:none;padding:16px;font-size:14px;font-weight:700;letter-spacing:1px;text-transform:uppercase;border-radius:4px;cursor:pointer;margin-top:8px;transition:background .2s,transform .1s}
+  .submit-btn:hover{background:#e0bc5c}
+  .submit-btn:active{transform:scale(.98)}
+  .submit-btn:disabled{background:#555;color:#888;cursor:not-allowed}
+
 </style>
 </head>
 <body>
@@ -47,6 +57,8 @@
     <p>Preencha com atenção — suas respostas determinam a personalização do seu protocolo semestral.<br>
     Dura aprox. 5-7 minutos. Preencha 1x ao entrar. Responda sobre o dia de <strong style="color:#C9A84C">ontem</strong> quando houver essa instrução.</p>
   </div>
+<form id="cycles-form" novalidate>
+
 
   <!-- ══════════ BLOCO 1 — IDENTIFICAÇÃO ══════════ -->
   <div class="section-divider">
@@ -662,7 +674,17 @@
   </div>
 
   <!-- RODAPÉ -->
-  <div class="form-footer">
+  
+  <div class="card" style="background:#0D0D0D;border:1.5px solid #C9A84C">
+    <button type="submit" class="submit-btn" id="submit-btn">ENVIAR FORMULÁRIO</button>
+    <p style="text-align:center;color:#555;font-size:9.5px;margin-top:8px">
+      Após enviar, encaminhe as fotos obrigatórias via WhatsApp no mesmo dia.<br>
+      Seu protocolo será gerado em até <strong style="color:#C9A84C">15 dias úteis</strong>.
+    </p>
+  </div>
+</form>
+
+<div class="form-footer">
     <p><strong>CYCLES PROTOCOLS</strong><br>
     Após enviar este formulário, encaminhe as <strong>fotos obrigatórias</strong> via WhatsApp no mesmo dia.<br>
     Seu protocolo será gerado em até <strong>15 dias úteis</strong> após receber formulário + fotos completos.
@@ -671,5 +693,56 @@
   </div>
 
 </div>
+
+<div id="toast"></div>
+<script>
+const FORMSPREE_ID = 'maqpblpk'; // ← trocar pelo ID real após criar em formspree.io
+
+document.getElementById('cycles-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const btn = document.getElementById('submit-btn');
+  const toast = document.getElementById('toast');
+  btn.disabled = true;
+  btn.textContent = 'Enviando...';
+
+  // Coleta todos os campos
+  const data = new FormData(this);
+
+  // Coleta checkboxes manualmente (FormData pega múltiplos valores)
+  const checkboxes = this.querySelectorAll('input[type=checkbox]');
+  const cbGroups = {};
+  checkboxes.forEach(cb => {
+    if (!cbGroups[cb.name]) cbGroups[cb.name] = [];
+    if (cb.checked) cbGroups[cb.name].push(cb.value);
+  });
+  Object.entries(cbGroups).forEach(([k,v]) => {
+    data.delete(k);
+    data.append(k, v.length ? v.join(' | ') : 'Nenhum');
+  });
+
+  try {
+    const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+    if (res.ok) {
+      toast.textContent = '✅ Formulário enviado! Aguarde contato em até 15 dias úteis.';
+      toast.className = 'show';
+      btn.textContent = '✅ Enviado com sucesso!';
+      this.reset();
+    } else {
+      throw new Error('Erro no envio');
+    }
+  } catch {
+    toast.textContent = '❌ Erro ao enviar. Tente novamente.';
+    toast.className = 'show error';
+    btn.disabled = false;
+    btn.textContent = 'ENVIAR FORMULÁRIO';
+  }
+  setTimeout(() => { toast.className = ''; }, 5000);
+});
+</script>
+
 </body>
 </html>
